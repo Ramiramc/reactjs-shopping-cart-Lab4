@@ -19,7 +19,7 @@ variables:
 - name: sariflog
   value: 'ImageAnalysisLogs'
 # a variable group
-- group: Mis_Variables
+- group: Mis_Variables_LAB4
 
 stages:
   - stage: SecurityScan
