@@ -33,10 +33,10 @@ stages:
         - task: SonarCloudPrepare@1
           inputs:
             SonarCloud: 'Connection SonarCloud LAB4'
-            organization: 'Ramiramc'
+            organization: 'ramiramc'
             scannerMode: 'CLI'
             configMode: 'manual'
-            cliProjectKey: 'Ramiramc_reactjs-shopping-cart-lab4'
+            cliProjectKey: 'ramiramc_reactjs-shopping-cart-lab4'
             cliProjectName: 'reactjs-shopping-cart-lab4'
             cliSources: '.'
         - task: SonarCloudAnalyze@1
