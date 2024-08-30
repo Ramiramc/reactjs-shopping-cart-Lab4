@@ -17,7 +17,7 @@ variables:
 - name: vmImageName
   value: 'ubuntu-latest'
 # a variable group
-- group: Mis_Variables
+- group: Mis_Variables_LAB4
 
 
 stages:
@@ -38,7 +38,7 @@ stages:
         - task: WhiteSource@21
           inputs:
             cwd: '$(System.DefaultWorkingDirectory)'
-            projectName: 'reactjs-shopping-cart'
+            projectName: 'reactjs-shopping-cart-Lab4'
       
       # Análisis con SonarCloud
 
@@ -51,12 +51,12 @@ stages:
           fetchDepth: 0
         - task: SonarCloudPrepare@1
           inputs:
-            SonarCloud: 'SonarCloud_Malevarro'
-            organization: 'malevarro'
+            SonarCloud: 'Connection SonarCloud LAB4'
+            organization: 'ramiramc'
             scannerMode: 'CLI'
             configMode: 'manual'
-            cliProjectKey: 'malevarro_reactjs-shopping-cart'
-            cliProjectName: 'reactjs-shopping-cart'
+            cliProjectKey: 'ramiramc_reactjs-shopping-cart-Lab4'
+            cliProjectName: 'reactjs-shopping-cart-Lab4'
             cliSources: '.'
         - task: SonarCloudAnalyze@1
         - task: SonarCloudPublish@1
